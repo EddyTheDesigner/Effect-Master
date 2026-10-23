@@ -8,9 +8,10 @@ The Windows build was tested with official EffectCraft 0.14.0 and VectorCraft 0.
 | Persistent-link live suite (`node tests/linked-live.mjs`) | 20 checks passed |
 | Windows palette live suite (`node tests/palette-live.mjs`) | 28 checks passed |
 | Linux host protocol tests (`node --test tests/linux-bridge.cjs`) | 7 tests passed on Windows |
+| Linux adapter live tests (`node tests/linux-host-live.mjs`) | 5 checks passed against isolated Windows apps |
 
 Windows checks cover editable geometry and paint, linked updates without duplicates, preservation of layer identity and animation, intentional property keyframes, save/reopen persistence, multiple objects, duplicate-link rejection, groups, gradients, undo, real palette button handlers, settings, reconnection, and explicit copies. Native screenshots were visually inspected. The installed executable was compared with the release build using SHA-256.
 
-The Linux preview uses the same transfer engine and a separate Electron desktop host. Its tests cover settings, socket framing and Unicode, request identity, timeout behavior without mutation retries, script construction, application errors, and connection checks. Linux application round trips have not been verified on this Windows development machine. See [Linux installation](LINUX.md).
+The Linux preview uses the same transfer engine and a separate Electron desktop host. Its tests cover settings, socket framing and Unicode, request identity, timeout behavior without mutation retries, script construction, application errors, and connection checks. Live adapter checks verify comp creation, native imports, linked identity and animation retention, editable stroke return, and explicit copies. The Linux renderer was visually inspected at its 330 × 512 content size with simulated connections, including app tabs and settings. Linux application round trips and native Linux startup have not been verified on this Windows development machine. See [Linux installation](LINUX.md).
 
 Generated profiles, artwork, screenshots, and outputs are not committed. Live suites use isolated profiles and ports; do not redirect them to working sessions.
