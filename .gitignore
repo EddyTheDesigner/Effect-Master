@@ -1,0 +1,29 @@
+research/
+build-tools/
+host-build/
+tests/profile-*/
+tests/no-fork/
+tests/palette-live/
+tests/linked-live/
+tests/native-*/
+tests/generated-*.jsx
+tests/*.log
+tests/*.ecproj
+tests/*.vectorcraft
+archive/
+
+# Local builds, release packages, and development references
+dist/
+releases/
+docs/OVERLORD-RESEARCH.md
+Launch VectorCraft.*
+tools/Build-VectorCraft.ps1
+
+# Only the maintained test harnesses belong in the repository
+tests/*
+!tests/run.mjs
+!tests/engine-tests.js
+!tests/linked-live.mjs
+!tests/palette-live.mjs
+!tests/linux-bridge.cjs
+!tests/linux-host-live.mjs
